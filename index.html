@@ -24,7 +24,8 @@
                 <div class="container"> 
                     <img src="logo.svg" class="navbar-brand "alt="logo">
                     <button class="navbar-toggler" data-toggle="collapse" data-target="#section">
-                        <span class="navbar-toggler-icon"></span>
+                        <span id="click" class="navbar-toggler-icon "></span>
+                        <span id="click1" class="d-none">X</span>
                     </button>
                     <div class="collapse navbar-collapse" id="section">
                         <ul class="navbar-nav mx-auto text-center ">
@@ -226,6 +227,26 @@
 
 
     <script src="script.js"></script>
+    <script>
+        var click = document.getElementById("click")
+        var click1 = document.getElementById("click1")
+        
+
+        click.addEventListener("click",function(){
+            click.className="d-none"
+            click1.className="d-inline"
+
+            
+        })
+        click1.addEventListener("click",function(){
+        
+            click.className="navbar-toggler-icon"
+            click1.className="d-none"
+            
+        })
+
+    </script>
+    
     
 </body>
 </html>
